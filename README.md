@@ -1,5 +1,10 @@
-# MySQL settings
+# Start Project
 
+```
+docker compose run --rm django django-admin startproject projectname .
+```
+
+# MySQL settings
 ### File: projectname > settings.py
 
 ```
@@ -20,4 +25,30 @@ DATABASES = {
         }
     }
 }
+```
+
+
+# Run Migration
+
+```
+docker compose run --rm django python manage.py migrate
+```
+
+# Create Superuser
+
+```
+docker compose run --rm django python manage.py createsuperuser
+```
+
+# Create App
+
+```
+docker compose run --rm django python manage.py startapp report
+```
+
+# Create Model
+### File: report > models.py
+
+```
+
 ```
